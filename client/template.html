@@ -1,0 +1,29 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<title>gallery</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="main">
+		<div class="image"> <img src= "images/5.jpg" width= "100%" height= "100%" onclick="imgWindow()" /></div>
+		<div class="image"> <img src= "images/1.png" width= "100%" height= "100%" onclick="imgWindow()"/></div>
+		<div class="image"> <img src= "images/2.jpg" width= "100%" height= "100%" onclick="imgWindow()"/></div>
+		<div class="image"> <img src= "images/3.jpg" width= "100%" height= "100%" onclick="imgWindow()"/></div>
+		<div class="image"> <img src= "images/4.jpg" width= "100%" height= "100%" onclick="imgWindow()"/></div>
+		<button id="left" onclick ="moveLeft()"> << </button>
+		<button id="right" onclick ="moveRight()"> >> </button>
+		<textarea name="msg" id="msg" rows="6" cols="100" style="display: none;"></textarea>
+		<button type="submit" id="sendMsg" style="display: none;">Send</button>
+	</div>
+	<script src="js/gallery.js"></script>
+</body>
+<script type="text/javascript" charset="utf-8" async defer>
+	function imgWindow(src){
+		document.getElementById("msg").style.display = "block";
+		document.getElementById("left").style.display = "none";
+		document.getElementById("right").style.display = "none";
+		document.getElementById("sendMsg").style.display = "block";
+	}
+</script>
+</html>
